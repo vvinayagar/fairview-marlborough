@@ -22,6 +22,7 @@ function Crest() {
 function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [hovered, setHovered] = useState(0)
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
     window.addEventListener('scroll', onScroll)
@@ -54,10 +55,17 @@ function Header() {
             {menuNav.map(n => <a key={n} href="#" onClick={() => setMenuOpen(false)}>{n}</a>)}
           </nav>
           <div className="menu__side">
-            <img src={boardingImg} alt="Pupils at the College" />
+            {/* stacked images — the hovered stage card crossfades its photo in */}
+            <div className="menu__media">
+              {areas.map((a, idx) => (
+                <img key={a.name} src={a.img} alt="" className={idx === hovered ? 'is-active' : ''} loading="lazy" />
+              ))}
+            </div>
             <ul className="menu__areas">
-              {areas.map(a => (
-                <li key={a.name}>
+              {areas.map((a, idx) => (
+                <li key={a.name} className={idx === hovered ? 'is-active' : ''}
+                  onMouseEnter={() => setHovered(idx)} onFocus={() => setHovered(idx)}
+                  onPointerDown={() => setHovered(idx)} tabIndex={0}>
                   <span className="menu__area-name">{a.name}</span>
                   <span className="menu__area-ages">{a.ages}</span>
                   <span className="menu__area-arrow">&#8594;</span>

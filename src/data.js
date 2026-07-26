@@ -31,11 +31,12 @@ export const news = [
   { tag: 'Community', badge: 'FRIDAY, 27 JUNE 2026', title: 'Dominus Arts Venue hosts our largest student showcase', photo: img('1511671782779-c97d3d27a1d4', 700, 460) },
 ]
 
+// Menu stage cards — hovering each swaps the menu image (Marlborough-style).
 export const areas = [
-  { name: 'Early Years', ages: 'Ages 3–6' },
-  { name: 'Primary · PYP', ages: 'Ages 6–11' },
-  { name: 'Middle Years · MYP', ages: 'Ages 11–16' },
-  { name: 'IB Diploma', ages: 'Ages 16–19' },
+  { name: 'Early Years', ages: 'Ages 3–6', img: img('1503676260728-1c00da094a0b', 900, 700) },
+  { name: 'Primary · PYP', ages: 'Ages 6–11', img: img('1580582932707-520aed937b7b', 900, 700) },
+  { name: 'Middle Years · MYP', ages: 'Ages 11–16', img: img('1522202176988-66273c2fd55f', 900, 700) },
+  { name: 'IB Diploma', ages: 'Ages 16–19', img: img('1523240795612-9a054b0db644', 900, 700) },
 ]
 
 // Accreditation / partner badges — text chips stand in for logos
