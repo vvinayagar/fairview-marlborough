@@ -57,7 +57,7 @@ p { margin: 0 0 18px; color: var(--gray); }
 .header__inner { position: relative; z-index: 1; }
 .header__inner { width: min(1400px, 94%); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
 .crest { display: flex; align-items: center; }
-.crest__img { height: 56px; width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,.35)); }
+.crest__img { height: clamp(56px, 6vw, 82px); width: auto; display: block; filter: drop-shadow(0 2px 8px rgba(0,0,0,.35)); }
 .header__right { display: flex; align-items: center; gap: 22px; background: rgba(255,255,255,.08); padding: 8px 8px 8px 30px; border-radius: 2px; }
 .header__top { display: flex; gap: 26px; }
 .header__top a { color: #fff; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
